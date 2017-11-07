@@ -98,8 +98,8 @@ impl Styles {
         }
 
         // Parse the environment variables into colours and extension mappings
-        let scale = matches.has_where(|f| f.matches(&flags::COLOR_SCALE) || f.matches(&flags::COLOUR_SCALE))?;
-        let mut colours = Colours::colourful(scale.is_some());
+        //let scale = matches.has_where(|f| f.matches(&flags::COLOR_SCALE) || f.matches(&flags::COLOUR_SCALE))?;
+        let mut colours = Colours::colourful(true);
 
         let (exts, use_default_filetypes) = parse_color_vars(vars, &mut colours);
 
